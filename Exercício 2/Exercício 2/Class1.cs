@@ -6,29 +6,56 @@ namespace Exercício_2
 {
     class Quadrado
     {
+        #region Atributos
         double lado;
         double area;
+        #endregion
 
-        public void SetLado(double p)
+        #region Construtores
+        public Quadrado()
         {
-            lado = p;
+            this.lado = 0;
+            this.area = 0;
+        }
+
+        public Quadrado(double lado)
+        {
+            this.lado = lado;
+            this.area = 0;
+        }
+        #endregion
+
+        #region Setters e Getters
+        public void SetLado(double lado)
+        {
+            this.lado = lado;
         }
 
         public double GetLado()
         {
-            return lado;
+            return this.lado;
         }
 
         public double GetArea()
         {
-            return area;
+            return this.area;
         }
 
+        #endregion
+
+        #region Métodos funcionais
         public double CalcularArea()
         {
-            area = lado * lado;
-            return area;
+            this.area = this.lado * this.lado;
+            return this.area;
         }
 
+        public double CalcularArea(double lado)
+        {
+            this.area = lado * lado;
+            return this.area;
+
+        }
+        #endregion
     }
 }
